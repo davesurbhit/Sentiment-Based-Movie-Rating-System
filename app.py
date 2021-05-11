@@ -13,6 +13,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
     
+@app.route('/movie')
+def movie():
+    return render_template('movie.html')
+
 
 @app.route('/predict',methods=['POST'])
 def predict():
